@@ -1,0 +1,47 @@
+/*
+Problem: Write a recursive function fib(n) to compute the n-th Fibonacci number 
+where fib(0)=0 and fib(1)=1.
+
+Input:
+- Single integer n
+
+Output:
+- Print the n-th Fibonacci number
+
+Example:
+Input:
+6
+
+Output:
+8
+
+Explanation: Sequence: 0,1,1,2,3,5,8 at positions 0,1,2,3,4,5,6
+*/
+
+#include <stdio.h>
+
+// Recursive function to calculate n-th Fibonacci number
+int fib(int n) {
+    // Base cases
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+    
+    // Recursive call
+    return fib(n - 1) + fib(n - 2);
+}
+
+int main() {
+    int n;
+
+    // Read input n
+    if (scanf("%d", &n) != 1) return 1;
+
+    // Output the result of the recursive function
+    printf("%d\n", fib(n));
+
+    return 0;
+}
