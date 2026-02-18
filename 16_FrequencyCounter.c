@@ -26,16 +26,16 @@ int main() {
     if (scanf("%d", &n) != 1) return 1;
 
     int arr[n];
-    int visited[n]; // Array to keep track of counted elements
+    int visited[n]; 
 
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
-        visited[i] = 0; // Initialize all as not visited
+        visited[i] = 0;
     }
 
     int first = 1;
     for (int i = 0; i < n; i++) {
-        // Skip if this element has already been counted
+        
         if (visited[i] == 1) {
             continue;
         }
@@ -44,7 +44,7 @@ int main() {
         for (int j = i + 1; j < n; j++) {
             if (arr[i] == arr[j]) {
                 count++;
-                visited[j] = 1; // Mark duplicate as visited
+                visited[j] = 1; 
             }
         }
 
